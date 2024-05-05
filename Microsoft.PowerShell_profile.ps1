@@ -86,7 +86,8 @@ function Test-CommandExists {
 }
 
 # Editor Configuration
-$EDITOR = if (Test-CommandExists code) { 'code' }
+$EDITOR = if (Test-CommandExists code) { 'code-insiders' }
+          elseif (Test-CommandExists code) { 'code' }
           elseif (Test-CommandExists nvim) { 'nvim' }
           elseif (Test-CommandExists pvim) { 'pvim' }
           elseif (Test-CommandExists vim) { 'vim' }
